@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        android:layout_weight="15"
+        app:cardCornerRadius="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/text_level_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubbie"
+                android:textColor="#266187"
+                android:layout_marginTop="5dp"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toTopOf="@id/text_complated"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Level" />
+
+            <TextView
+                android:id="@+id/text_level_in_win_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubbie"
+                android:textColor="#266187"
+                android:textSize="36sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toTopOf="@id/text_complated"
+                app:layout_constraintStart_toEndOf="@id/text_level_string"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="2" />
+
+
+            <TextView
+                android:id="@+id/text_complated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubbie"
+                android:layout_marginBottom="5dp"
+                android:textColor="#FFBB00"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_level_in_win_dialog"
+                android:text="Complated" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="85">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="220dp"
+                android:layout_height="200dp"
+                android:src="@color/white"
+                app:civ_border_color="#31000000"
+                app:civ_border_width="1dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="190dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:src="#FFE880"
+                app:civ_border_color="#31000000"
+                app:civ_border_width="1dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ubbie"
+                    android:text="Score"
+                    android:textColor="#266187"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/text_score_in_win_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="0dp"
+                    android:fontFamily="@font/ubbie"
+                    android:text="601"
+                    android:textColor="#266187"
+                    android:textSize="46sp"
+                    />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.61">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@color/white"
+                app:civ_border_color="#31000000"
+                app:civ_border_width="1dp" />
+
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/button_next"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:padding="20dp"
+                android:src="@drawable/ic_next"
+                app:cb_color="#FFBB00"
+                tools:ignore="SpeakableTextPresentCheck">
+
+
+            </at.markushi.ui.CircleButton>
+
+
+            <at.markushi.ui.CircleButton
+
+                android:id="@+id/button_to_menu"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:padding="20dp"
+                android:src="@drawable/ic_next"
+                app:cb_color="#2B70A4"
+                android:visibility="gone"
+                >
+
+
+            </at.markushi.ui.CircleButton>
+
+        </FrameLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
